@@ -169,10 +169,10 @@ footer>p { grid-column:1/-1; margin:35px 0 0; padding-top:22px; border-top:1px s
 @media (max-width:560px) {
   .hero { min-height:auto; display:flex; flex-direction:column; }
   .site-header { order:1; min-height:78px; background:var(--green-deep); }
-  .hero-slides { order:2; position:relative; inset:auto; height:54vh; }
-  .hero-slides::after { content:""; position:absolute; inset:auto 0 0 0; height:58%; background:linear-gradient(0deg,#1d3028 0%,rgba(29,48,40,.92) 18%,rgba(29,48,40,.68) 40%,rgba(29,48,40,.36) 65%,rgba(29,48,40,.1) 88%,transparent 100%); pointer-events:none; }
+  .hero-slides { order:2; position:relative; inset:auto; height:54vh; overflow:hidden; }
   .hero-shade { display:none; }
   .hero-content { order:3; position:relative; z-index:auto; min-height:auto; width:auto; padding:36px 22px 30px; }
+  .hero-content::before { content:""; position:absolute; left:0; right:0; bottom:100%; height:24vh; background:linear-gradient(0deg,#1d3028 0%,rgba(29,48,40,.92) 20%,rgba(29,48,40,.65) 45%,rgba(29,48,40,.3) 72%,transparent 100%); pointer-events:none; }
   .hero-description { max-width:92%; font-size:16px; }
   .scroll-link { display:none; }
   .hero-footer { order:4; position:relative; z-index:auto; inset:auto; padding:0 22px 26px; justify-content:center; }
