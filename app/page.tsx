@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowDown, ArrowRight, ArrowUpRight, Mail, MapPin, Menu } from "lucide-react";
-import { ProjectMarquee } from "@/components/project-marquee";
+import { ProjectGallery } from "@/components/project-gallery";
 
 const whatsapp =
   "https://wa.me/5592991507276?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20um%20projeto.";
@@ -123,7 +123,7 @@ export default function Home() {
           <h2>Projetos que se revelam por inteiro.</h2>
           <p>Na arquitetura, na luz, nos materiais, nos interiores e na forma como tudo se encontra. Conheça alguns de nossos projetos.</p>
         </div>
-        <ProjectMarquee />
+        <ProjectGallery />
       </section>
 
       <section className="services-detail">

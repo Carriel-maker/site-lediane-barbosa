@@ -76,17 +76,42 @@ a { color:inherit; text-decoration:none; }
 .projects-intro h2,.services-detail h2,.about h2,.method h2,.contact h2 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.04em; }
 .projects-intro h2 { font-size:clamp(42px,5vw,72px); line-height:1.03; }
 .projects-intro>p:last-child { max-width:590px; margin:30px auto 0; font-size:16px; line-height:1.7; color:#60645b; }
+.project-gallery { width:min(1400px,92vw); margin:0 auto; padding-bottom:clamp(90px,10vw,140px); }
+.cat-radio { position:absolute; opacity:0; pointer-events:none; }
+.cat-tabs { position:relative; }
+.cat-labels { display:flex; justify-content:center; gap:clamp(24px,4vw,56px); margin-bottom:clamp(50px,7vw,84px); border-bottom:1px solid rgba(37,40,32,.18); }
+.cat-labels label { padding:0 0 20px; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#8c9086; cursor:pointer; border-bottom:1px solid transparent; margin-bottom:-1px; transition:color .25s; }
+.cat-labels label:hover { color:var(--ink); }
+.cat-panel { display:none; }
+.project-gallery:has(#cat-arquitetura:checked) .cat-panel[data-cat="arquitetura"] { display:block; }
+.project-gallery:has(#cat-interiores:checked) .cat-panel[data-cat="interiores"] { display:block; }
+.project-gallery:has(#cat-comercial:checked) .cat-panel[data-cat="comercial"] { display:block; }
+.project-gallery:has(#cat-arquitetura:checked) label[for="cat-arquitetura"],
+.project-gallery:has(#cat-interiores:checked) label[for="cat-interiores"],
+.project-gallery:has(#cat-comercial:checked) label[for="cat-comercial"] { color:var(--ink); border-bottom-color:var(--gold); }
 .project-marquee { width:100%; overflow:hidden; }
-.project-track { display:flex; width:max-content; animation:projectsMarquee 30s linear infinite; will-change:transform; }
+.project-track { display:flex; width:max-content; animation:projectsMarquee var(--marquee-duration,32s) linear infinite; will-change:transform; }
 .project-marquee:hover .project-track,.project-marquee:focus-within .project-track { animation-play-state:paused; }
-.project-panel { position:relative; width:clamp(280px,26.5vw,510px); height:clamp(350px,36vw,610px); flex:0 0 auto; overflow:hidden; background:var(--green-deep); outline:none; }
+.project-track--static { animation:none; }
+.project-panel { position:relative; display:block; width:clamp(280px,26.5vw,510px); height:clamp(350px,36vw,610px); flex:0 0 auto; overflow:hidden; background:var(--green-deep); outline:none; }
 .project-panel img { object-fit:cover; transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s ease; }
-.project-reveal { position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:space-between; gap:20px; padding:clamp(24px,2.3vw,40px); color:#fff; background:linear-gradient(0deg,rgba(10,29,23,.9),rgba(10,29,23,.08) 68%); opacity:0; transform:translateY(12px); transition:opacity .35s ease,transform .35s ease; }
 .project-panel:hover img,.project-panel:focus img { transform:scale(1.055); filter:saturate(.85); }
+.project-reveal { position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:space-between; gap:20px; padding:clamp(24px,2.3vw,40px); color:#fff; background:linear-gradient(0deg,rgba(10,29,23,.9),rgba(10,29,23,.08) 68%); opacity:0; transform:translateY(12px); transition:opacity .35s ease,transform .35s ease; }
 .project-panel:hover .project-reveal,.project-panel:focus .project-reveal { opacity:1; transform:translateY(0); }
 .project-reveal span { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-soft); }
 .project-reveal h3 { max-width:360px; margin:11px 0 0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(25px,2.2vw,38px); font-weight:400; line-height:1.05; }
 @keyframes projectsMarquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+.project-lightbox { display:none; position:fixed; inset:0; z-index:300; background:#0a1410; overflow-y:auto; padding:clamp(70px,9vw,120px) 6vw clamp(60px,8vw,100px); }
+.project-lightbox:target { display:block; }
+.project-lightbox-inner { width:min(1200px,100%); margin:0 auto; }
+.lightbox-close { position:fixed; top:28px; right:clamp(22px,4vw,56px); z-index:2; display:flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#fff; }
+.lightbox-tag { display:block; margin:0 0 12px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-soft); }
+.project-lightbox h3 { margin:0 0 40px; color:#fff; font-family:Georgia,"Times New Roman",serif; font-size:clamp(32px,4vw,54px); font-weight:400; letter-spacing:-.02em; }
+.lightbox-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(14px,1.6vw,26px); }
+.lightbox-photo { position:relative; height:clamp(260px,26vw,420px); overflow:hidden; background:var(--green-deep); }
+.lightbox-photo img { object-fit:cover; }
+.lightbox-photo:first-child { grid-column:1/-1; height:clamp(360px,40vw,620px); }
 
 .services-detail { padding:clamp(100px,11vw,170px) 6vw; background:var(--beige); }
 .services-intro { width:min(720px,88vw); margin:0 auto clamp(70px,8vw,90px); text-align:center; }
@@ -157,7 +182,10 @@ footer>p { grid-column:1/-1; margin:35px 0 0; padding-top:22px; border-top:1px s
   .pillars article { min-height:260px; border-right:0; border-bottom:1px solid rgba(255,255,255,.16); padding-inline:28px; }
   .pillars h3 { margin-top:24px; }
   .contact-grid { grid-template-columns:1fr; gap:38px; }
+  .cat-labels { gap:28px; }
   .project-panel { width:48vw; height:520px; }
+  .lightbox-grid { grid-template-columns:1fr; }
+  .lightbox-photo,.lightbox-photo:first-child { height:340px; }
   .service-item summary { grid-template-columns:42px 1fr auto; padding:28px 0; gap:20px; }
   .service-body { margin-left:62px; }
   .about,.method { grid-template-columns:1fr; }
@@ -178,7 +206,11 @@ footer>p { grid-column:1/-1; margin:35px 0 0; padding-top:22px; border-top:1px s
   .scroll-link { display:none; }
   .hero-footer { order:4; position:relative; z-index:auto; inset:auto; padding:0 22px 26px; justify-content:center; }
   .projects-intro { margin-bottom:60px; }
+  .cat-labels { gap:20px; }
+  .cat-labels label { font-size:11px; padding-bottom:14px; }
   .project-panel { width:72vw; height:460px; }
+  .project-lightbox { padding:64px 22px 50px; }
+  .lightbox-close { top:20px; right:22px; }
   .service-item summary { grid-template-columns:34px 1fr auto; gap:16px; }
   .service-body { margin-left:50px; }
   .about-image { min-height:420px; }

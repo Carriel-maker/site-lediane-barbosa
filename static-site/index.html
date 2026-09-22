@@ -119,36 +119,338 @@
       <h2>Projetos que se revelam por inteiro.</h2>
       <p>Na arquitetura, na luz, nos materiais, nos interiores e na forma como tudo se encontra. Conheça alguns de nossos projetos.</p>
     </div>
-    <div class="project-marquee" aria-label="Projetos em destaque">
-      <div class="project-track">
-        <article class="project-panel" tabindex="0">
-          <img src="assets/hero-interiores.png" alt="Sala de estar contemporânea projetada por Lediane Barbosa" />
-          <div class="project-reveal">
-            <div><span>Projeto de interiores</span><h3>Leveza, luz e formas orgânicas</h3></div>
-            <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    <div class="project-gallery">
+      <div class="cat-tabs">
+        <input type="radio" name="project-category" id="cat-arquitetura" class="cat-radio" checked />
+        <input type="radio" name="project-category" id="cat-interiores" class="cat-radio" />
+        <input type="radio" name="project-category" id="cat-comercial" class="cat-radio" />
+        <div class="cat-labels">
+          <label for="cat-arquitetura">Arquitetura</label>
+          <label for="cat-interiores">Interiores</label>
+          <label for="cat-comercial">Comercial</label>
+        </div>
+      </div>
+      <div class="cat-panel" data-cat="arquitetura">
+        <div class="project-marquee" aria-label="Projetos de arquitetura">
+          <div class="project-track" style="--marquee-duration:18s">
+          <a href="#p-renaissance" class="project-panel">
+            <img src="assets/projetos/renaissance/1.jpg" alt="Casa Renaissance" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de arquitetura</span>
+                <h3>Casa Renaissance</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-alphaville" class="project-panel">
+            <img src="assets/projetos/alphaville/1.jpg" alt="Casa Alphaville" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de arquitetura</span>
+                <h3>Casa Alphaville</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-renaissance" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/renaissance/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de arquitetura</span>
+                <h3>Casa Renaissance</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-alphaville" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/alphaville/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de arquitetura</span>
+                <h3>Casa Alphaville</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
           </div>
-        </article>
-        <article class="project-panel" tabindex="0">
-          <img src="assets/hero-arquitetura.jpg" alt="Fachada residencial projetada por Lediane Barbosa" />
-          <div class="project-reveal">
-            <div><span>Projeto residencial</span><h3>Presença, equilíbrio e elegância</h3></div>
-            <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </div>
+      <div class="cat-panel" data-cat="interiores">
+        <div class="project-marquee" aria-label="Projetos de interiores">
+          <div class="project-track" style="--marquee-duration:54s">
+          <a href="#p-reserva-inglesa" class="project-panel">
+            <img src="assets/projetos/reserva-inglesa/1.jpg" alt="Apto Reserva Inglesa" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto Reserva Inglesa</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-atmosphere" class="project-panel">
+            <img src="assets/projetos/atmosphere/1.jpg" alt="Apto 1402 Atmosphere" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto 1402 Atmosphere</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-concept-105" class="project-panel">
+            <img src="assets/projetos/concept-105/1.jpg" alt="Apto Concept 105 Next" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto Concept 105 Next</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-coral-gables" class="project-panel">
+            <img src="assets/projetos/coral-gables/1.jpg" alt="Apto 802A Coral Gables" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto 802A Coral Gables</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-artefacto-2023" class="project-panel">
+            <img src="assets/projetos/artefacto-2023/1.jpg" alt="Mostra Artefacto 2023" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Mostra Artefacto 2023</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-artefacto-2025" class="project-panel">
+            <img src="assets/projetos/artefacto-2025/1.jpg" alt="Mostra Artefacto 2025" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Mostra Artefacto 2025</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-reserva-inglesa" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/reserva-inglesa/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto Reserva Inglesa</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-atmosphere" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/atmosphere/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto 1402 Atmosphere</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-concept-105" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/concept-105/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto Concept 105 Next</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-coral-gables" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/coral-gables/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Apto 802A Coral Gables</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-artefacto-2023" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/artefacto-2023/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Mostra Artefacto 2023</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
+          <a href="#p-artefacto-2025" class="project-panel" tabindex="-1" aria-hidden="true">
+            <img src="assets/projetos/artefacto-2025/1.jpg" alt="" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto de interiores</span>
+                <h3>Mostra Artefacto 2025</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
           </div>
-        </article>
-        <article class="project-panel" tabindex="-1" aria-hidden="true">
-          <img src="assets/hero-interiores.png" alt="" />
-          <div class="project-reveal">
-            <div><span>Projeto de interiores</span><h3>Leveza, luz e formas orgânicas</h3></div>
-            <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </div>
+      <div class="cat-panel" data-cat="comercial">
+        <div class="project-marquee" aria-label="Projetos de comercial">
+          <div class="project-track project-track--static" style="--marquee-duration:14s">
+          <a href="#p-advocacia" class="project-panel">
+            <img src="assets/projetos/advocacia/1.jpg" alt="Escritório de Advocacia" />
+            <div class="project-reveal">
+              <div>
+                <span>Projeto comercial</span>
+                <h3>Escritório de Advocacia</h3>
+              </div>
+              <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </a>
           </div>
-        </article>
-        <article class="project-panel" tabindex="-1" aria-hidden="true">
-          <img src="assets/hero-arquitetura.jpg" alt="" />
-          <div class="project-reveal">
-            <div><span>Projeto residencial</span><h3>Presença, equilíbrio e elegância</h3></div>
-            <svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-renaissance">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de arquitetura</span>
+          <h3>Casa Renaissance</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/renaissance/1.jpg" alt="Casa Renaissance" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/renaissance/2.jpg" alt="Casa Renaissance" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/renaissance/3.jpg" alt="Casa Renaissance" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/renaissance/4.jpg" alt="Casa Renaissance" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/renaissance/5.jpg" alt="Casa Renaissance" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/renaissance/6.jpg" alt="Casa Renaissance" /></div>
           </div>
-        </article>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-alphaville">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de arquitetura</span>
+          <h3>Casa Alphaville</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/alphaville/1.jpg" alt="Casa Alphaville" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/alphaville/2.jpg" alt="Casa Alphaville" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/alphaville/3.jpg" alt="Casa Alphaville" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/alphaville/4.jpg" alt="Casa Alphaville" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/alphaville/5.jpg" alt="Casa Alphaville" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/alphaville/6.jpg" alt="Casa Alphaville" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-reserva-inglesa">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de interiores</span>
+          <h3>Apto Reserva Inglesa</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/reserva-inglesa/1.jpg" alt="Apto Reserva Inglesa" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/reserva-inglesa/2.jpg" alt="Apto Reserva Inglesa" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/reserva-inglesa/3.jpg" alt="Apto Reserva Inglesa" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/reserva-inglesa/4.jpg" alt="Apto Reserva Inglesa" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/reserva-inglesa/5.jpg" alt="Apto Reserva Inglesa" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/reserva-inglesa/6.jpg" alt="Apto Reserva Inglesa" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-atmosphere">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de interiores</span>
+          <h3>Apto 1402 Atmosphere</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/atmosphere/1.jpg" alt="Apto 1402 Atmosphere" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/atmosphere/2.jpg" alt="Apto 1402 Atmosphere" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/atmosphere/3.jpg" alt="Apto 1402 Atmosphere" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/atmosphere/4.jpg" alt="Apto 1402 Atmosphere" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/atmosphere/5.jpg" alt="Apto 1402 Atmosphere" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/atmosphere/6.jpg" alt="Apto 1402 Atmosphere" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-concept-105">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de interiores</span>
+          <h3>Apto Concept 105 Next</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/concept-105/1.jpg" alt="Apto Concept 105 Next" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/concept-105/2.jpg" alt="Apto Concept 105 Next" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/concept-105/3.jpg" alt="Apto Concept 105 Next" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/concept-105/4.jpg" alt="Apto Concept 105 Next" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/concept-105/5.jpg" alt="Apto Concept 105 Next" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/concept-105/6.jpg" alt="Apto Concept 105 Next" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-coral-gables">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de interiores</span>
+          <h3>Apto 802A Coral Gables</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/coral-gables/1.jpg" alt="Apto 802A Coral Gables" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/coral-gables/2.jpg" alt="Apto 802A Coral Gables" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/coral-gables/3.jpg" alt="Apto 802A Coral Gables" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/coral-gables/4.jpg" alt="Apto 802A Coral Gables" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/coral-gables/5.jpg" alt="Apto 802A Coral Gables" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/coral-gables/6.jpg" alt="Apto 802A Coral Gables" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-artefacto-2023">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de interiores</span>
+          <h3>Mostra Artefacto 2023</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2023/1.jpg" alt="Mostra Artefacto 2023" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2023/2.jpg" alt="Mostra Artefacto 2023" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2023/3.jpg" alt="Mostra Artefacto 2023" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2023/4.jpg" alt="Mostra Artefacto 2023" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2023/5.jpg" alt="Mostra Artefacto 2023" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2023/6.jpg" alt="Mostra Artefacto 2023" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-artefacto-2025">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto de interiores</span>
+          <h3>Mostra Artefacto 2025</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2025/1.jpg" alt="Mostra Artefacto 2025" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2025/2.jpg" alt="Mostra Artefacto 2025" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2025/3.jpg" alt="Mostra Artefacto 2025" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2025/4.jpg" alt="Mostra Artefacto 2025" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2025/5.jpg" alt="Mostra Artefacto 2025" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/artefacto-2025/6.jpg" alt="Mostra Artefacto 2025" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="project-lightbox" id="p-advocacia">
+        <a href="#projetos" class="lightbox-close" aria-label="Fechar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Fechar</a>
+        <div class="project-lightbox-inner">
+          <span class="lightbox-tag">Projeto comercial</span>
+          <h3>Escritório de Advocacia</h3>
+          <div class="lightbox-grid">
+            <div class="lightbox-photo"><img src="assets/projetos/advocacia/1.jpg" alt="Escritório de Advocacia" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/advocacia/2.jpg" alt="Escritório de Advocacia" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/advocacia/3.jpg" alt="Escritório de Advocacia" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/advocacia/4.jpg" alt="Escritório de Advocacia" /></div>
+            <div class="lightbox-photo"><img src="assets/projetos/advocacia/5.jpg" alt="Escritório de Advocacia" /></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
