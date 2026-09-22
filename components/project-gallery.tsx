@@ -67,31 +67,59 @@ const projects: Project[] = [
   },
 ];
 
-const categories: { id: Category; label: string; tag: string }[] = [
-  { id: "arquitetura", label: "Arquitetura", tag: "Projeto de arquitetura" },
-  { id: "interiores", label: "Interiores", tag: "Projeto de interiores" },
-  { id: "comercial", label: "Comercial", tag: "Projeto comercial" },
+const categories: { id: Category; label: string; tag: string; cover: string; coverTitle: string }[] = [
+  {
+    id: "interiores",
+    label: "Interiores",
+    tag: "Projeto de interiores",
+    cover: "/assets/hero-interiores.png",
+    coverTitle: "Leveza, luz e formas orgânicas",
+  },
+  {
+    id: "arquitetura",
+    label: "Arquitetura",
+    tag: "Projeto residencial",
+    cover: "/assets/hero-arquitetura.jpg",
+    coverTitle: "Presença, equilíbrio e elegância",
+  },
+  {
+    id: "comercial",
+    label: "Comercial",
+    tag: "Projeto comercial",
+    cover: "/assets/projetos/advocacia/1.jpg",
+    coverTitle: "Precisão, elegância e identidade",
+  },
 ];
 
 export function ProjectGallery() {
+  const loopingCategories = [...categories, ...categories];
+
   return (
     <div className="project-gallery">
-      <div className="cat-tabs">
-        {categories.map((c, i) => (
-          <input
-            key={c.id}
-            type="radio"
-            name="project-category"
-            id={`cat-${c.id}`}
-            className="cat-radio"
-            defaultChecked={i === 0}
-          />
-        ))}
-        <div className="cat-labels">
-          {categories.map((c) => (
-            <label key={c.id} htmlFor={`cat-${c.id}`}>
-              {c.label}
-            </label>
+      <div className="project-marquee" aria-label="Categorias de projetos">
+        <div className="project-track">
+          {loopingCategories.map((c, index) => (
+            <a
+              href={`#cat-${c.id}`}
+              className="project-panel"
+              key={`${c.id}-${index}`}
+              tabIndex={index < categories.length ? 0 : -1}
+              aria-hidden={index >= categories.length}
+            >
+              <Image
+                src={c.cover}
+                alt={index < categories.length ? c.coverTitle : ""}
+                fill
+                sizes="(max-width: 640px) 72vw, 27vw"
+              />
+              <div className="project-reveal">
+                <div>
+                  <span>{c.tag}</span>
+                  <h3>{c.coverTitle}</h3>
+                </div>
+                <ArrowUpRight size={25} strokeWidth={1.2} />
+              </div>
+            </a>
           ))}
         </div>
       </div>
@@ -103,36 +131,44 @@ export function ProjectGallery() {
         const duration = Math.max(14, catProjects.length * 9);
 
         return (
-          <div className="cat-panel" data-cat={c.id} key={c.id}>
-            <div
-              className="project-marquee"
-              aria-label={`Projetos de ${c.label.toLowerCase()}`}
-              style={{ ["--marquee-duration" as string]: `${duration}s` }}
-            >
-              <div className={`project-track${isSingle ? " project-track--static" : ""}`}>
-                {loopingProjects.map((p, index) => (
-                  <a
-                    href={`#p-${p.slug}`}
-                    className="project-panel"
-                    key={`${p.slug}-${index}`}
-                    tabIndex={index < catProjects.length ? 0 : -1}
-                    aria-hidden={index >= catProjects.length}
-                  >
-                    <Image
-                      src={p.images[0]}
-                      alt={index < catProjects.length ? p.title : ""}
-                      fill
-                      sizes="(max-width: 640px) 72vw, 27vw"
-                    />
-                    <div className="project-reveal">
-                      <div>
-                        <span>{c.tag}</span>
-                        <h3>{p.title}</h3>
+          <div className="project-lightbox" id={`cat-${c.id}`} key={c.id}>
+            <a href="#projetos" className="lightbox-close" aria-label="Fechar">
+              <X size={16} strokeWidth={1.4} />
+              Fechar
+            </a>
+            <div className="project-lightbox-inner">
+              <span className="lightbox-tag">{c.label}</span>
+              <h3>Projetos de {c.label.toLowerCase()}</h3>
+              <div
+                className="project-marquee"
+                aria-label={`Projetos de ${c.label.toLowerCase()}`}
+                style={{ ["--marquee-duration" as string]: `${duration}s` }}
+              >
+                <div className={`project-track${isSingle ? " project-track--static" : ""}`}>
+                  {loopingProjects.map((p, index) => (
+                    <a
+                      href={`#p-${p.slug}`}
+                      className="project-panel"
+                      key={`${p.slug}-${index}`}
+                      tabIndex={index < catProjects.length ? 0 : -1}
+                      aria-hidden={index >= catProjects.length}
+                    >
+                      <Image
+                        src={p.images[0]}
+                        alt={index < catProjects.length ? p.title : ""}
+                        fill
+                        sizes="(max-width: 640px) 72vw, 27vw"
+                      />
+                      <div className="project-reveal">
+                        <div>
+                          <span>{c.tag}</span>
+                          <h3>{p.title}</h3>
+                        </div>
+                        <ArrowUpRight size={25} strokeWidth={1.2} />
                       </div>
-                      <ArrowUpRight size={25} strokeWidth={1.2} />
-                    </div>
-                  </a>
-                ))}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -143,7 +179,7 @@ export function ProjectGallery() {
         const category = categories.find((c) => c.id === p.category)!;
         return (
           <div className="project-lightbox" id={`p-${p.slug}`} key={p.slug}>
-            <a href="#projetos" className="lightbox-close" aria-label="Fechar">
+            <a href={`#cat-${p.category}`} className="lightbox-close" aria-label="Fechar">
               <X size={16} strokeWidth={1.4} />
               Fechar
             </a>
