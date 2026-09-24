@@ -161,7 +161,7 @@ export default function Home() {
             [
               "05",
               "Projetos comerciais",
-              "Um espaço comercial também comunica uma identidade — e merece o mesmo cuidado de um projeto residencial.",
+              "Um bom espaço comercial também começa pela identidade que representa.",
               "Escritórios, consultórios, lojas e ambientes corporativos pedem soluções que unam funcionalidade, fluidez de uso e a identidade de quem ocupa o espaço. Desenvolvemos a arquitetura e os interiores desses projetos com a mesma atenção às proporções, aos materiais e à luz — para que cada ambiente comercial seja, ao mesmo tempo, bem resolvido tecnicamente e coerente com a marca que representa.",
             ],
           ].map(([number, title, lead, body]) => (
