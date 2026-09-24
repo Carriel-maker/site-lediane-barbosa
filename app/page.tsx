@@ -158,6 +158,12 @@ export default function Home() {
               "Entre o desenho e o resultado final, decisões continuam acontecendo.",
               "O acompanhamento de obra permite orientar ajustes, esclarecer soluções e preservar a coerência do projeto ao longo da execução. Uma presença técnica que ajuda a fazer com que aquilo que foi pensado chegue ao espaço construído com a mesma qualidade.",
             ],
+            [
+              "05",
+              "Projetos comerciais",
+              "Um espaço comercial também comunica uma identidade — e merece o mesmo cuidado de um projeto residencial.",
+              "Escritórios, consultórios, lojas e ambientes corporativos pedem soluções que unam funcionalidade, fluidez de uso e a identidade de quem ocupa o espaço. Desenvolvemos a arquitetura e os interiores desses projetos com a mesma atenção às proporções, aos materiais e à luz — para que cada ambiente comercial seja, ao mesmo tempo, bem resolvido tecnicamente e coerente com a marca que representa.",
+            ],
           ].map(([number, title, lead, body]) => (
             <details className="service-item" name="service" key={number}>
               <summary>
